@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+
+    <!-- common css -->
+    <link rel="stylesheet" href="../static/css/app.css">
+    <link rel="stylesheet" href="../static/css/timecardList.css">
+    <link rel="stylesheet" href="../static/css/api/selectorWrapper.css">
+    <link rel="stylesheet" href="../static/css/tableFixed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" TYPE="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!-- header-start -->
+<div class="header">
+    <div class="header-box " id="header-box">
+        <div class="header-wrap wrap-left">
+            <div class="wrap-header">
+                <span><i class="fa fa-cube" aria-hidden="true"></i> MATERIA</span>
+            </div>
+            <div class="wrap-body">
+                <div class="cell">
+                    <div class="user-box">
+                        <div class="user-img">
+                            <div class="img-box"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="user-info">
+                            <ul>
+                                <li class="user-name"><span class="bold">Robert</span></li>
+                                <li class="user-job"><span>UX DESIGNER</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <ul>
+                        <li><a href="./employeeList2.html"><i class="fa fa-user-o" aria-hidden="true"></i> 사원관리</a></li>
+                        <li class="active"><a href="./timecardList.html"><i class="fa fa-check-square-o"
+                                                                            aria-hidden="true"></i> 근태관리</a></li>
+                        <li><a href="./salaryMSList.html"><i class="fa fa-credit-card" aria-hidden="true"></i> 급여관리</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 휴가관리</a></li>
+                        <li><a href="#"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> 휴직관리</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> 퇴사관리</a></li>
+                        <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> 인사서식</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i> 신청/알림</a></li>
+                        <li><a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용권구매</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap wrap-right">
+            <div class="wrap-header">
+                <ul>
+                    <li><a id="menu-btn" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="wrap-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-end -->
+
+<div class="contents" id="contents">
+    <div class="contents-box">
+        <div class="selector-wrapper">
+            <ul class="selector-list">
+                <li class="selector-item current-active"><a href="./timecardList.html">일반직</a></li>
+                <li class="selector-item"><a href="./timecardListCh.html">교대제</a></li>
+            </ul>
+        </div>
+
+        <div class="contents-title">
+            <h1><span><i class="fa fa-angle-down" aria-hidden="true"></i></span> 근태관리대장</h1>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-box">
+                <div class="box-header">
+                    <div class="header-wrapper">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-location-arrow"
+                                                               aria-hidden="true"></i></span>
+                                    <span class="menu-text">액셀업로드</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-pencil-square-o"
+                                                               aria-hidden="true"></i></span>
+                                    <span class="menu-text">근태 일괄입력</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                    <span class="menu-text">휴무일 일괄지정</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                    <span class="menu-text">근태 일괄삭제</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-check-square-o"
+                                                               aria-hidden="true"></i></span>
+                                    <span class="menu-text">근태관리대장</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-book" aria-hidden="true"></i></span>
+                                    <span class="menu-text">엑셀출력</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="menu-icon"><i class="fa fa-check-square-o"
+                                                               aria-hidden="true"></i></span>
+                                    <span class="menu-text">근태 일괄승인</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-input">
+                    <div class="input-wrapper">
+                        <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span><input
+                            type="text" placeholder="Search for note..." autocomplete="off">
+                    </div>
+                </div>
+                <div class="fixed-layout">
+                    <div class="screen-box">
+                        <div class="table table-header">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th><input type="checkbox" checked></th>
+                                    <th>사번</th>
+                                    <th class="scroll-fixed">성명</th>
+                                    <th>근로조건</th>
+                                    <th>부서</th>
+                                    <th>직위</th>
+                                    <th>업무시작</th>
+                                    <th>업무종료</th>
+                                    <th>지각</th>
+                                    <th>조퇴</th>
+                                    <th>연장</th>
+                                    <th>야간</th>
+                                    <th>휴일</th>
+                                    <th>휴일연장</th>
+                                    <th>법내연장</th>
+                                    <th>결근</th>
+                                    <th>경고</th>
+                                    <th>관리</th>
+                                    <th>신청승인</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="table table-contents">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td>1111</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">김용식</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>222</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">김광훈</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>333</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">정성룡</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">손홍민</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">박주호</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">김남일</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">안정환</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">박지성</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">우구아우메이다</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">홍철</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">김병지</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td><input type="checkbox" class="user-check"></td>
+                                    <td>01234</td>
+                                    <td class="scroll-fixed">박주영</td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td>-</td>
+                                    <td>영업부</td>
+                                    <td>과장</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3</td>
+                                    <td></td>
+                                    <td class="content-icon"><a class="a-content-check" href="#"><i
+                                            class="fa fa-file-text" aria-hidden="true"></i></a></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- header-start -->
+<div class="footer">
+
+
+</div>
+<!-- header-end -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../static/js/base.js"></script>
+<script src="../static/js/api/materialize/Select.js"></script>
+<script src="../static/js/api/materialize/TextInput.js"></script>
+<script src="../static/js/api/selectorItem.js"></script>
+<script src="../static/js/api/tableFixed.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+html, body{
+    // width:100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    height :100%;
+}
+html, body, ul, li, p{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+.contents {
+    position: relative;
+    z-index: 1;
+}
