@@ -1,0 +1,20 @@
+@mixin cellWrapper {
+  //border:2px solid yellow;
+  overflow: auto;
+  height: 70vh;
+  padding: 15px;
+  .cell {
+    background-color: #dfdfdf;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.4);
+    border-radius: 3px;
+    a {
+      display: block;
+      color: black;
+      padding: 15px;
+    }
+  }
+}
+.cell-wrapper {
+  @include cellWrapper;
+}

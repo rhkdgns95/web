@@ -1,0 +1,101 @@
+@mixin formWrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  padding-bottom: 50px;
+}
+@mixin formBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin logoBox {
+  margin: 90px 0 10px 0;
+  height: 100px;
+  width: 300px;
+  .img-box {
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+    img {
+      display :block;
+    }
+  }
+}
+@mixin listBox{
+  border-top: 2px solid black;
+  padding-top:70px;
+  margin-top: 20px;
+  width: auto;
+
+}
+@mixin title {
+  position: relative;
+  color: #515252;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@mixin list {
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+@mixin cell {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+  }
+  .cell-title {
+    width: 130px;
+    text-align: right;
+    padding-right:10px;
+    font-size: 1.1em;
+    color: dimgray;
+  }
+  .cell-input {
+    input {
+      box-sizing: border-box;
+      border: 1px solid gray;
+      margin-bottom: 0;
+      border-radius: 6px;
+      padding: 0 10px;
+      //box-shadow: 1px 1px 1px 1px rgba(0,0,0,.2) inset, -1px -1px 1px 1px rgba(0,0,0,.24) inset;
+    }
+  }
+}
+@mixin menuCell {
+  text-align: right;
+  a {
+    margin-right: 5px;
+  }
+}
+
+.form-wrapper {
+  @include formWrapper;
+  .form-box {
+    @include formBox;
+    .logo-box {
+      @include logoBox;
+    }
+    .list-box {
+      @include listBox;
+      .list {
+        @include list;
+        .title {
+          @include title;
+        }
+        .cell {
+          @include cell;
+        }
+      }
+      .menu-cell {
+        @include menuCell;
+      }
+    }
+  }
+}

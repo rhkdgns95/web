@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>전자근로계약서 작성</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" TYPE="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/contractWrite.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<div class="contents">
+    <div class="row">
+        <div class="contents-wrapper">
+            <div class="input-title"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>근로계약서 작성</div>
+            <div class="input-field col s12">
+                <select class="selector">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option name="contract_shift" value="1">근로계약서_교대제_휴램_수정2.hwp</option>
+                    <option name="contract_net" value="2">근로계약서_네트제_휴램_수정2.hwp</option>
+                    <option name="contract_short_time" value="3">근로계약서_단시간_휴램_수정2.hwp</option>
+                    <option name="contract_total_worker" value="4">근로계약서_일반(통상근로자)_휴램_수정2.hwp</option>
+                    <option name="contract_daily_worker_construction" value="5">근로계약서_일용직(건설업)_휴램_수정2.hwp</option>
+                    <option name="contract_daily_worker_general" value="6">근로계약서_일용직(건설업외 일반업종)_휴램_수정2</option>
+                    <option name="contract_free" value="7">용역계약서_프리랜서_휴램_수정2</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-wrapper">
+            <form action="">
+                <div id="contract_shift" class="form-box active">
+                    <!-- 공통서식 시작 -->
+                    <h1>근로계약서_교대제</h1>
+                    <div class="agree-cell cell">
+                        <p class="font-bold">사용자 <input type="text"><span class="span-bracket">(이하 "사용자"라 한다.) </span>과(와) 근로자 <input type="text"> <span class="span-bracket">(이하 "근로자"라 한다.)</span>는(은) 다음과 같이 근로계약을 체결하고 계약 사항을 성실히 이행할 것을 약정한다.</p>
+                    </div>
+                    <div class="cell">
+                        <p class="cell-title font-bold">1. 근무장소 : <input type="text"></p>
+                    </div>
+                    <div class="cell">
+                        <p class="cell-title font-bold">2. 근로계약기간</p>
+                        <p>① 20<input type="text" maxlength="2">년 <input type="text" maxlength="2">월 <input type="text" maxlength="2">일 ~
+                            20<input type="text" maxlength="2">년 <input type="text" maxlength="2">월 <input type="text" maxlength="2">일</p>
+                        <p>② 수습기간 (
+                            <label>
+                                <input class="with-gap" name="group_1" type="radio" name="work_type_period" checked/>
+                                <span>유</span>
+                            </label> /
+                            <label>
+                                <input class="with-gap" name="group_1" type="radio" name="work_type_period"/>
+                                <span>무</span>
+                            </label>) /
+                            수습기간 <input type="text" maxlength="3">개월 / 수습기간동안 급여 월 급여의 <input type="text" maxlength="3">%</p>
+                        <p>③ 수습기간 종료 시 근로자의 근무태도, 근무능력 및 건강상태 등을 종합적으로 판단하여 업무수행이 부적격하다고 판단 될 경우 본 체용을 거부할 수 있다.</p>
+                        <p>④ 당사자의 귀책 사유 없이 위 근로계약기간이 지나도록 재계약을 하지 않을 시 본 계약의 내용이 자동
+                            (<label>
+                                <input class="with-gap" name="group_2" type="radio" name="work_type_period" checked/>
+                                <span>유</span>
+                            </label> /
+                            <label>
+                                <input class="with-gap" name="group_2" type="radio" name="work_type_period"/>
+                                <span>무</span>
+                            </label>)
+                        </p>
+                    </div>
+                    <div class="cell">
+                        <p class="cell-title font-bold">3. 근로계약</p>
+                        <p>담당직무 / 부서: <input type="text"></p>
+                    </div>
+                    <div class="cell">
+                        <p class="cell-title font-bold">근로 및 휴게시간</p>
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>교대제 유형</th>
+                                <th>2조 격일제</th>
+                                <th>2조 2교대</th>
+                                <th>3조 2교대</th>
+                                <th>3조 3교대</th>
+                                <th>기타선택</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>교대조1</td>
+                                <td colspan="2.5">시.종업시간 : 00:00 ~ 00:00</td>
+                                <td colspan="2.5">휴게시간 : 00:00 ~ 00:00</td>
+                            </tr>
+                            <tr>
+                                <td>교대조1</td>
+                                <td colspan="2.5">시.종업시간 : 00:00 ~ 00:00</td>
+                                <td colspan="2.5">휴게시간 : 00:00 ~ 00:00</td>
+                            </tr>
+                            <tr>
+                                <td>교대조1</td>
+                                <td colspan="2.5">시.종업시간 : 00:00 ~ 00:00</td>
+                                <td colspan="2.5">휴게시간 : 00:00 ~ 00:00</td>
+                            </tr>
+                            <tr>
+                                <td>교대조1</td>
+                                <td colspan="2.5">시.종업시간 : 00:00 ~ 00:00</td>
+                                <td colspan="2.5">휴게시간 : 00:00 ~ 00:00</td>
+                            </tr>
+                            <tr>
+                                <td>교대조1</td>
+                                <td colspan="2.5">시.종업시간 : 00:00 ~ 00:00</td>
+                                <td colspan="2.5">휴게시간 : 00:00 ~ 00:00</td>
+                            </tr>
+                            <tr>
+                                <td>교대조1</td>
+                                <td colspan="2.5">시.종업시간 : 00:00 ~ 00:00</td>
+                                <td colspan="2.5">휴게시간 : 00:00 ~ 00:00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 공통서식 종료 -->
+
+                </div>
+
+                <div id="contract_net" class="form-box">
+                    <h1>근로계약서_네트제</h1>
+                </div>
+                <div id="contract_short_time" class="form-box">
+                    <h1>근로계약서_단시간</h1>
+                </div>
+                <div id="contract_total_worker" class="form-box">
+                    <h1>근로계약서_일반(통산근로자)</h1>
+                </div>
+                <div id="contract_daily_worker_construction" class="form-box">
+                    <h1>근로계약서_일용직(건설업)</h1>
+                </div>
+                <div id="contract_daily_worker_general" class="form-box">
+                    <h1>근로계약서_일용직(건설업외 일반업종)</h1>
+                </div>
+                <div id="contract_free" class="form-box">
+                    <h1>용역계약서_프리랜서</h1>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../static/js/api/materialize/Select.js"></script>
+<script src="../static/js/api/contractWrite.js"></script>
+</html>

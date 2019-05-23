@@ -1,0 +1,58 @@
+@import "./mixin/contentsBox";
+@import "./mixin/contentsTitle";
+
+.contents {
+  .contents-box {
+    @include contents-box;
+    .contents-title {
+      @include contents-title;
+    }
+  }
+  .contents-box2 {
+    margin:40px auto;
+    .table-form {
+      padding-top: 20px;
+      form {
+        .input-field {
+          width:calc(100% / 3);
+          i {
+            color: #2d6181;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 850px) {
+  .contents {
+    .contents-box {
+      .contents-title {
+        @include contents-title-850px;
+      }
+    }
+    .contents-box2 {
+      .table-form {
+        form {
+          .row {
+            margin-bottom: 0;
+          }
+          .input-field {
+            width: calc(100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 560px) {
+  .contents {
+    padding:10px;
+    .contents-box {
+      padding:10px;
+      .contents-title {
+        @include contents-title-560px;
+      }
+    }
+  }
+}

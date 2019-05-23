@@ -1,0 +1,58 @@
+.form-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  padding-bottom: 50px; }
+  .form-wrapper .form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .form-wrapper .form-box .logo-box {
+      margin: 90px 0 10px 0;
+      height: 100px;
+      width: 300px; }
+      .form-wrapper .form-box .logo-box .img-box {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center; }
+        .form-wrapper .form-box .logo-box .img-box img {
+          display: block; }
+    .form-wrapper .form-box .list-box {
+      border-top: 2px solid black;
+      padding-top: 70px;
+      margin-top: 20px;
+      width: auto; }
+      .form-wrapper .form-box .list-box .list {
+        margin-bottom: 20px;
+        padding: 40px 20px;
+        margin: 10px;
+        border-bottom: 1px solid black; }
+        .form-wrapper .form-box .list-box .list .title {
+          position: relative;
+          color: #515252;
+          font-size: 1.3em;
+          font-weight: bold;
+          margin-bottom: 20px; }
+        .form-wrapper .form-box .list-box .list .cell {
+          display: flex;
+          align-items: center;
+          padding: 8px; }
+          .form-wrapper .form-box .list-box .list .cell:not(:last-child) {
+            border-bottom: 1px solid #dfdfdf; }
+          .form-wrapper .form-box .list-box .list .cell .cell-title {
+            width: 130px;
+            text-align: right;
+            padding-right: 10px;
+            font-size: 1.1em;
+            color: dimgray; }
+          .form-wrapper .form-box .list-box .list .cell .cell-input input {
+            box-sizing: border-box;
+            border: 1px solid gray;
+            margin-bottom: 0;
+            border-radius: 6px;
+            padding: 0 10px; }
+      .form-wrapper .form-box .list-box .menu-cell {
+        text-align: right; }
+        .form-wrapper .form-box .list-box .menu-cell a {
+          margin-right: 5px; }

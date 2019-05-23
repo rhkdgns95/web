@@ -1,0 +1,59 @@
+.scroll-wrapper {
+  border-left: 0;
+  border-right: 0; }
+  .scroll-wrapper .select-wrapper .caret {
+    fill: #00bfa5; }
+  .scroll-wrapper .select-wrapper .input-field {
+    width: 93%;
+    border: 1px solid #dfdfdf;
+    margin: 0 auto;
+    margin-top: 32px; }
+    .scroll-wrapper .select-wrapper .input-field input {
+      color: #26a69a;
+      padding-left: 20px;
+      font-size: 1.2em;
+      box-sizing: border-box;
+      margin: 0; }
+  .scroll-wrapper .scroll-box {
+    overflow: auto;
+    padding: 30px; }
+    .scroll-wrapper .scroll-box a {
+      position: relative;
+      display: block;
+      padding: 10px;
+      background-color: white;
+      border-radius: 6px; }
+    .scroll-wrapper .scroll-box .cell {
+      border-radius: 6px;
+      margin: 40px 0;
+      color: black;
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
+      transition: box-shadow .4s;
+      position: relative; }
+      .scroll-wrapper .scroll-box .cell:first-child {
+        margin-top: 0; }
+      .scroll-wrapper .scroll-box .cell a {
+        padding: 20px;
+        color: black; }
+        .scroll-wrapper .scroll-box .cell a i {
+          color: #032cf4; }
+      .scroll-wrapper .scroll-box .cell:hover {
+        box-shadow: 0 4px 9px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.43); }
+      .scroll-wrapper .scroll-box .cell .cell-company-name {
+        display: flex;
+        font-size: 1.5em;
+        margin-top: .912rem; }
+        .scroll-wrapper .scroll-box .cell .cell-company-name p:last-child {
+          font-size: .6em;
+          padding-left: 20px; }
+      .scroll-wrapper .scroll-box .cell .cell-company-type {
+        padding-top: 30px;
+        font-size: 1.2em;
+        color: #66707e; }
+      .scroll-wrapper .scroll-box .cell .cell-company-code {
+        font-size: 1em; }
+      .scroll-wrapper .scroll-box .cell .cell-address-title {
+        margin-top: 5px; }
+      .scroll-wrapper .scroll-box .cell .cell-company-address {
+        padding-top: 10px;
+        color: #66707e; }

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="utf-8">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+
+    <!-- common css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/api/selectorWrapper2.css">
+    <link rel="stylesheet" href="../static/css/configCompany.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <link rel="stylesheet" TYPE="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!-- header-start -->
+<div class="header">
+    <div class="header-box hide-half" id="header_box">
+        <div class="header-wrap wrap-left">
+            <div class="wrap-header">
+                <span><i class="fa fa-cube" aria-hidden="true"></i> MATERIA</span>
+            </div>
+            <div class="wrap-body">
+                <div class="cell">
+                    <div class="user-box">
+                        <div class="user-img">
+                            <div class="img-box"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="user-info">
+                            <ul>
+                                <li class="user-name"><span class="bold">Robert</span></li>
+                                <li class="user-job"><span>UX DESIGNER</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell collection">
+                    <ul>
+                        <li><a href="./employeeList2.html"><i class="fa fa-user-o" aria-hidden="true"></i> 사원관리</a></li>
+                        <li><a href="./timecardList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i> 근태관리</a></li>
+                        <li><a href="./salaryMSList.html"><i class="fa fa-credit-card" aria-hidden="true"></i> 급여관리</a></li>
+                        <li><a href="./annualMaster.html"><i class="fa fa-clock-o" aria-hidden="true"></i> 휴가관리</a></li>
+                        <li><a href="./timeoffList.html"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> 휴직관리</a></li>
+                        <li><a href="./retireList.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 퇴사관리</a></li>
+                        <li><a href="./greetingForm.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> 인사서식</a></li>
+                        <li><a href="./employeeListJoin.html"><i class="fa fa-bell-o" aria-hidden="true"></i> 신청/알림<span class="new badge">7</span></a></li>
+                        <li><a href="./orderFormPay.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용권구매</a></li>
+                        <li><a href="./webContract.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 전자근로계약</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap wrap-right">
+            <div class="wrap-header">
+                <ul>
+                    <li><a id="menu-btn" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                    <li><a class="active" href="./configCompany.html"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="wrap-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-end -->
+
+<div class="contents" id="contents">
+    <div class="selector-wrapper">
+        <ul class="selector-list">
+            <li class="selector-item current-active"><a href="./configCompany.html"><i class="fa fa-id-badge" aria-hidden="true"></i>회사정보</a></li>
+            <li class="selector-item"><a href="./configEmployee.html"><i class="fa fa-id-badge" aria-hidden="true"></i>사원관리</a></li>
+            <li class="selector-item "><a href="./configTimecard.html"><i class="fa fa-id-badge" aria-hidden="true"></i>근태관리</a></li>
+            <li class="selector-item "><a href="./configSalary.html"><i class="fa fa-id-badge" aria-hidden="true"></i>급여관리</a></li>
+            <li class="selector-item "><a href="./configHoliday.html"><i class="fa fa-id-badge" aria-hidden="true"></i>휴가관리</a></li>
+            <li class="selector-item "><a href="#"><i class="fa fa-id-badge" aria-hidden="true"></i>법정교육알림</a></li>
+            <li class="selector-item "><a href="#"><i class="fa fa-id-badge" aria-hidden="true"></i>관리권한설정</a></li>
+        </ul>
+    </div>
+
+    <div class="contents-box">
+        <div class="contents-title">
+            <h1><span><i class="fa fa-angle-down" aria-hidden="true"></i></span> 회사정보 입력</h1>
+        </div>
+
+
+        <div class="config-wrapper">
+            <div class="config">
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>회사코드</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text" value="543220" readonly>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>회사명</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">business</i>
+                    </div>
+                </div>
+                <div class="cell cell-business-code">
+                    <div class="cell-intro">
+                        <span>사업자등록번호</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text" maxlength="3">
+                        <div class="slash">-</div>
+                        <input type="text" maxlength="2">
+                        <div class="slash">-</div>
+                        <input type="text" maxlength="5">
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>개업일</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text" class="datepicker">
+                        <i class="material-icons dp48">date_range</i>
+                    </div>
+                </div>
+                <div class="cell cell-type">
+                    <div class="cell-intro">
+                        <span>종목</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <div><a class="waves-effect waves-light btn #00acc1 cyan darken-1">검색</a></div>
+                    </div>
+                </div>
+
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>대표자명</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">person_outline</i>
+                    </div>
+                </div>
+
+                <div class="cell cell-address">
+                    <div class="cell-intro">
+                        <span>주소</span>
+                    </div>
+                    <div class="cell-contents">
+                        <div class="cell-input">
+                            <input id="address_code" type="text" placeholder="우편번호" readonly >
+                            <div><a id="btn_address" class="waves-effect waves-light btn #00acc1 cyan darken-1">주소검색</a></div>
+                        </div>
+                        <div class="cell-input">
+                            <input id="simple_address" type="text" placeholder="주소" readonly>
+                        </div>
+                        <div class="cell-input">
+                            <input id="detail_address" type="text" placeholder="상세주소">
+                        </div>
+                        <div class="cell-input">
+                            <input id="added_address" type="text" placeholder="참고항목">
+                        </div>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>전화번호</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">local_phone</i>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>팩스번호</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">print</i>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>대표 이메일</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">email</i>
+                    </div>
+                </div>
+                <div class="cell cell-business-type">
+                    <div class="cell-list">
+                        <div class="cell-intro">
+                            <span>사업장 유형</span>
+                        </div>
+                        <div class="cell-contents">
+                            <input type="text">
+                            <i class="material-icons dp48">group_work</i>
+                        </div>
+                    </div>
+                    <div class="cell-list">
+                        <div class="cell-intro">
+                            <span>일반근로자 소정근로시간</span>
+                        </div>
+                        <div class="cell-contents">
+                            <span>주 <input type="text" maxlength="3"> 시간</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell cell-company-logo">
+                    <div class="cell-list">
+                        <div class="cell-intro">
+                            <span>회사로고</span>
+                        </div>
+                        <div class="cell-contents">
+                            <div><a href="#">[로고파일 삭제]</a></div>
+                            <div class="cell-img-box">
+                                <img src="http://hulam.co.kr/hulam/data/test01/sample2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cell-radio-box">
+                            <form action="#">
+                                <p>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio"/>
+                                        <span>출력안함</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" checked/>
+                                        <span>서류상단출력</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio"/>
+                                        <span>서류하단출력</span>
+                                    </label>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="cell-list">
+                        <div class="cell-intro">
+                            <span>직인(도장)</span>
+                        </div>
+                        <div class="cell-contents">
+                            <div><a href="#">[직인파일 삭제]</a></div>
+                            <div class="cell-img-box">
+                                <img src="http://hulam.co.kr/hulam/data/test01/%EC%A7%81%EC%9D%B8%EC%83%98%ED%94%8C.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line"><i class="material-icons dp48">mail_outline</i>담당자 정보를 입력하시면 프로그램 사용 중 발생한 정보(지원금, 위반사항 등)를 메일로 발송해 드립니다.</div>
+
+                <div class="cell cell-manager-info">
+                    <div class="cell-list">
+                        <div class="cell-intro">
+                            <span>담당자 이름</span>
+                        </div>
+                        <div class="cell-contents">
+                            <input type="text">
+                            <i class="material-icons dp48">person_outline</i>
+                        </div>
+                    </div>
+                    <div class="cell-list">
+                        <div class="cell-intro">
+                            <span>담당자 직위</span>
+                        </div>
+                        <div class="cell-contents">
+                            <input type="text">
+                            <i class="material-icons dp48">group_work</i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>담당자 전화</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">local_phone</i>
+                    </div>
+                </div>
+
+                <div class="cell">
+                    <div class="cell-intro">
+                        <span>담당자 이메일</span>
+                    </div>
+                    <div class="cell-contents">
+                        <input type="text">
+                        <i class="material-icons dp48">mail_outline</i>
+                    </div>
+                </div>
+
+                <div class="line"><i class="material-icons dp48">mail_outline</i>광고성 이메일이 아닌 인사노무정보와 관련된 안내 메일을 보내드립니다. (예: 육아휴직 처리시 4대보험료 감면 안내 내용 발생)</div>
+
+                <div class="cell cell-delivery-info">
+                    <div class="cell-intro">
+                        <span>휴램 정보수신</span>
+                    </div>
+                    <div class="cell-contents">
+                        <div class="cell-radio-box">
+                            <form action="#">
+                                <p>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio"/>
+                                        <span>대표이메일 + 담당자이메일</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio" checked/>
+                                        <span>대표이메일</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="with-gap" name="group1" type="radio"/>
+                                        <span>담당자이메일</span>
+                                    </label>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-box">
+            <button class="btn waves-effect waves-light " type="submit" name="action">확인
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- header-start -->
+<div class="footer">
+
+
+
+</div>
+<!-- header-end -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../static/js/base.js"></script>
+<!--<script src="../static/js/api/materialize/Select.js"></script>-->
+<!--<script src="../static/js/api/materialize/TextInput.js"></script>-->
+<script src="../static/js/api/selectorItem.js"></script>
+<script src="../static/js/api/datepicker.js"></script>
+
+<!-- Daum Address -->
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="../static/js/api/getAddress.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+</body>
+</html>
+

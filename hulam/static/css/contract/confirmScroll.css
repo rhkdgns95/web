@@ -1,0 +1,13 @@
+.cell-wrapper {
+  overflow: auto;
+  height: 70vh;
+  padding: 15px; }
+  .cell-wrapper .cell {
+    background-color: #dfdfdf;
+    margin-bottom: 15px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 3px; }
+    .cell-wrapper .cell a {
+      display: block;
+      color: black;
+      padding: 15px; }

@@ -1,0 +1,43 @@
+.selector-wrapper {
+  margin-top: 10px;
+  margin-bottom: 30px; }
+  .selector-wrapper .selector-list {
+    display: flex; }
+    .selector-wrapper .selector-list .selector-item.active a, .selector-wrapper .selector-list .selector-item.current-active a {
+      color: white;
+      background-color: #00b0d9; }
+      .selector-wrapper .selector-list .selector-item.active a::after, .selector-wrapper .selector-list .selector-item.current-active a::after {
+        width: 100%;
+        background-color: #0084c5; }
+    .selector-wrapper .selector-list .selector-item:first-child a::after {
+      left: auto;
+      right: 0; }
+    .selector-wrapper .selector-list .selector-item a {
+      position: relative;
+      display: block;
+      padding: 18px 40px;
+      background-color: white;
+      transition: background-color .4s; }
+      .selector-wrapper .selector-list .selector-item a i {
+        margin-right: 10px; }
+      .selector-wrapper .selector-list .selector-item a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 5px;
+        width: 0;
+        left: 0;
+        transform: translateY(-100%);
+        background-color: #0084c5;
+        transition: all .5s; }
+
+@media (max-width: 850px) {
+  .selector-wrapper {
+    top: -30px; } }
+
+@media (max-width: 560px) {
+  .selector-wrapper .selector-list .selector-item a {
+    padding: 12px 25px;
+    font-size: .9em; }
+    .selector-wrapper .selector-list .selector-item a::after {
+      height: 3px; } }

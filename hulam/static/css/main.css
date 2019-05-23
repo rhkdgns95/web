@@ -1,0 +1,67 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100% !important; }
+
+.contents {
+  height: 100%;
+  padding-top: 150px;
+  background-color: #efefef; }
+
+.login-container {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .login-container .login-wrapper .logo-box {
+    margin-bottom: 50px;
+    text-align: center; }
+    .login-container .login-wrapper .logo-box a {
+      display: inline-block; }
+      .login-container .login-wrapper .logo-box a img {
+        margin: 0 auto;
+        display: block; }
+
+.user-wrapper .user-box {
+  background-color: white;
+  max-width: 340px;
+  margin: 0 auto;
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.2), 3px 3px 3px rgba(0, 0, 0, 0.32);
+  border-radius: 6px;
+  padding: 30px; }
+  .user-wrapper .user-box .user-box-header {
+    display: flex;
+    justify-content: space-between; }
+    .user-wrapper .user-box .user-box-header div {
+      display: flex;
+      align-items: center; }
+      .user-wrapper .user-box .user-box-header div span {
+        font-size: 1em;
+        font-weight: bold;
+        color: #3d3c44; }
+  .user-wrapper .user-box .user-box-body {
+    margin-top: 20px;
+    border-top: 2px solid #dfdfdf;
+    padding: 5px; }
+    .user-wrapper .user-box .user-box-body .btn-cell-box .btn-cell {
+      margin-top: 20px; }
+      .user-wrapper .user-box .user-box-body .btn-cell-box .btn-cell a {
+        position: relative;
+        background-color: #214077;
+        border: 1.5px solid #143363;
+        color: white;
+        display: block;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: background-color .3s; }
+        .user-wrapper .user-box .user-box-body .btn-cell-box .btn-cell a i {
+          margin-right: 10px;
+          transition: margin-right .3s; }
+        .user-wrapper .user-box .user-box-body .btn-cell-box .btn-cell a:hover {
+          background-color: inherit;
+          color: #214077; }
+          .user-wrapper .user-box .user-box-body .btn-cell-box .btn-cell a:hover i {
+            margin-right: 0; }

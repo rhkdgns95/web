@@ -1,0 +1,107 @@
+@mixin scrollWrapper {
+  border-left: 0;
+  border-right: 0;
+}
+@mixin scrollBox {
+  //border:2px solid green;
+  //height: 600px;
+  overflow: auto;
+  padding: 30px;
+  a {
+    position: relative;
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+  }
+}
+@mixin selectWrapper {
+  .caret {
+    fill: #00bfa5;
+  }
+  .input-field {
+
+    width: 93%;
+    border:1px solid #dfdfdf;
+    margin:0 auto;
+    margin-top: 32px;
+
+    input {
+      color: #26a69a;
+      //height: 100px;
+      padding-left: 20px;
+      font-size: 1.2em;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    select {
+
+    }
+  }
+}
+
+@mixin cell {
+  border-radius: 6px;
+  margin: 40px 0;
+  color: black;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
+  transition: box-shadow .4s;
+  position: relative;
+  &:first-child {
+    margin-top: 0;
+  }
+  a {
+    padding: 20px;
+    color: black;
+    i {
+      color: #032cf4;
+    }
+  }
+  &:hover {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.19), 0 2px 2px rgba(0, 0, 0, 0.43);
+  }
+  .cell-company-name {
+    display: flex;
+
+    font-size: 1.5em;
+    margin-top: .912rem;
+    p{
+
+      &:last-child {
+        font-size: .6em;
+        padding-left: 20px;
+      }
+      //width: 50%;
+    }
+  }
+  .cell-company-type {
+    padding-top: 30px;
+    font-size: 1.2em;
+    color: #66707e;
+  }
+  .cell-company-code {
+    font-size: 1em;
+  }
+  .cell-address-title {
+    margin-top: 5px;
+  }
+  .cell-company-address {
+    padding-top: 10px;
+    color: #66707e;
+  }
+}
+.scroll-wrapper {
+  @include scrollWrapper;
+
+  .select-wrapper {
+    @include selectWrapper;
+  }
+  .scroll-box {
+    @include scrollBox;
+
+    .cell {
+      @include cell;
+    }
+  }
+
+}

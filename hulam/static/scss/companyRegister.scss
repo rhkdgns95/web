@@ -1,0 +1,261 @@
+body {
+  //background-color: white;
+}
+@mixin foucsLabel {
+  color: #26a69a;
+}
+
+@mixin form {
+  display: flex;
+  flex-flow: row wrap;
+  .list {
+    width: 50%;
+    &.list-width-full {
+      width: 100%;
+    }
+  }
+  @media(max-width: 600px) {
+    display: block;
+    .list {
+      width: 100%;
+    }
+  }
+}
+@mixin cellCompanyRegisterCode {
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+  div {
+    display: flex;
+    align-items: center;
+    padding:0 7px;
+  }
+  input {
+    padding:0 5px;
+    max-width: 90px;
+  }
+}
+@mixin cellCompanyAddress {
+  #address_code {
+    display: inline-block;
+    width: 130px;
+    box-sizing:border-box;
+  }
+  #btn_address {
+    box-sizing:border-box;
+    margin-left: 10px;
+  }
+}
+@mixin cellCompanySearch {
+  display: flex;
+  align-items: center;
+
+  input {
+    max-width: 200px;
+  }
+  #btn_search {
+    margin-left: 8px;
+    width: 70px;
+  }
+}
+
+@mixin label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform:translateY(-100%);
+  font-size: .93em;
+  color: lightslategray;
+}
+@mixin placeholder{
+  font-size: .8em;
+}
+
+@mixin cellBox {
+  display: flex;
+  //justify-content: space-around;
+  .cell {
+    width: 50%;
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    &.cell-work-time {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      white-space:nowrap;
+      input {
+        padding: 0 5px;
+      }
+    }
+    &.cell-add-file {
+      padding-top:20px;
+      box-sizing:border-box;
+
+      .cell-file-found {
+
+        a {
+          margin: 10px;
+        }
+        .file-field {
+          display: flex;
+          flex-flow: row wrap;
+          width: 125px;
+          .file-path-wrapper {
+            padding-left: 0;
+            .file-path {
+              box-sizing:border-box;
+              border:1px solid gray;
+              margin: 0;
+              font-size: .8em;
+              padding-left:5px;
+              margin-bottom: 10px;
+              &.invalid {
+                background-color: #fff8ee;
+                color: #868686;
+                box-shadow: none;
+              }
+            }
+          }
+          .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:0 auto;
+            height:2em;
+            line-height: 2em;
+            padding: 15px;
+            i {
+              font-size: 1em;
+            }
+            input {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .img-box {
+        overflow:hidden;
+        width: 125px;
+        height: 125px;
+        padding: 10px;
+        border:1px solid gray;
+        box-sizing:border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+          display:block;
+        }
+      }
+
+    }
+  }
+}
+
+.form-wrapper {
+  border:1px solid #dfdfdf;
+  box-shadow: 0 3px 4px rgba(0,0,0,.24), 0 3px 4px rgba(0,0,0,.34);
+  border-radius: 6px;
+  background-color: white;
+  width: 90%;
+  margin:30px auto;
+  max-width: 900px;
+  .title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 40px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #525252;
+    i {
+      margin-right: 10px;
+      border-radius: 50%;
+      padding: 5px;
+      border:1px solid #26a69a;
+      color: #26a69a;
+      box-shadow: 0 1px 3px rgba(0,0,0,.24), 0 2px 3px rgba(0,0,0,.4);
+    }
+  }
+  .form-box {
+    form {
+      @include form;
+      .list {
+        padding: 15px;
+        box-sizing: border-box;
+        &:nth-of-type(4) {
+          .list-intro {
+            margin-bottom: 40px;
+          }
+          .cell {
+            label {
+              top: -10px;
+            }
+          }
+        }
+        .cell {
+          margin-bottom: 30px;
+          position: relative;
+          &.cell-company-register-code {
+            @include cellCompanyRegisterCode;
+          }
+          &.cell-company-address {
+            @include cellCompanyAddress;
+          }
+          &.cell-company-search {
+            @include cellCompanySearch;
+          }
+
+          .cell-setting {
+            color: black;
+          }
+
+          input {
+            margin-top: 10px;
+            &:focus {
+              & ~ label {
+               @include foucsLabel;
+              }
+            }
+            &::placeholder {
+              @include placeholder;
+            }
+          }
+          & > label {
+            @include label;
+          }
+          p {
+            margin-top: 10px;
+          }
+        }
+        .cell-box {
+          @include cellBox;
+
+        }
+        .list-intro {
+          display: flex;
+          align-items: center;
+          font-size: .9em;
+          color: #7c8b86;
+          margin: 30px 0 40px 0;
+          padding-bottom: 5px;
+          border-bottom: 2px solid #1ebaac;
+          i {
+            font-size: 1.2em;
+            color: #1ebaac;
+            margin-right: 5px;
+          }
+        }
+      }
+      .bottom-menu {
+        text-align: center;
+        margin:50px auto;
+      }
+    }
+  }
+}

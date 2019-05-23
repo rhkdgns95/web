@@ -1,0 +1,54 @@
+@mixin contents-list {
+    .tabs {
+        top: 0;
+        left: -1px;
+        width: 50%;
+        position: absolute;
+        transform: translateY(-100%);
+        
+        border:1px solid #dfdfdf;
+        border-bottom: 0;
+        height: auto;
+        overflow: hidden;
+        .indicator{
+            border-radius: 50%;
+            height:1px;
+            background-color: #37a5c3;
+            width: 50.5%;
+        }
+        .tab {
+            box-sizing:border-box;
+            width:50%;
+            height: 70px;
+            background-color: #e4f7ff;
+            i {
+                padding-right: 15px;
+            }
+            a {
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                color: #70ade2;
+                &.active {
+                    color: #003f5f;
+                }
+            }
+        }
+    }
+}
+
+@mixin contents-list-560px {
+    .tabs {
+        .tab {
+            width:50%;
+            height: 50px;
+            background-color: #b0dbff;
+            i {
+                padding-right: 15px;
+            }
+            a {
+                font-size: .7em;
+            }
+        }
+    }
+}

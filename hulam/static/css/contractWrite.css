@@ -1,0 +1,68 @@
+.contents {
+  border: 1px solid red; }
+  .contents .row {
+    background-color: white;
+    width: 90%;
+    margin: 30px auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 2px 2px rgba(0, 0, 0, 0.34);
+    border: 1px solid #dfdfdf;
+    padding: 20px;
+    border-radius: 6px; }
+    .contents .row .contents-wrapper {
+      border: 2px solid red;
+      display: block;
+      height: auto;
+      margin-bottom: 100px; }
+      .contents .row .contents-wrapper .input-title {
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        padding: 20px 0;
+        font-size: 1.5em; }
+        .contents .row .contents-wrapper .input-title i {
+          margin-right: 10px;
+          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
+      .contents .row .contents-wrapper .input-field {
+        padding-top: 5px;
+        border: 1px solid #26a69a;
+        display: block; }
+    .contents .row .form-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .contents .row .form-wrapper .form-box {
+        border: 1px solid green;
+        height: 300px;
+        width: 100%;
+        opacity: 0;
+        height: 0;
+        transform: scale(0.1);
+        transition: opacity .3s, transform .4s; }
+        .contents .row .form-wrapper .form-box.active {
+          transform: scale(1);
+          transition: opacity .4s, transform .6s;
+          opacity: 1;
+          height: 100%; }
+        .contents .row .form-wrapper .form-box .cell.agree-cell {
+          margin-bottom: 15px; }
+        .contents .row .form-wrapper .form-box .cell p {
+          padding: 0 10px;
+          font-size: .8em;
+          width: 100%; }
+          .contents .row .form-wrapper .form-box .cell p.cell-title {
+            font-size: 1.2em;
+            margin-bottom: 10px; }
+          .contents .row .form-wrapper .form-box .cell p input[type=text] {
+            width: 200px;
+            height: 25px;
+            margin-bottom: 0;
+            font-size: 1em; }
+          .contents .row .form-wrapper .form-box .cell p .span-bracket {
+            color: #969696;
+            font-size: .9em; }
+          .contents .row .form-wrapper .form-box .cell p label span {
+            padding-left: 25px;
+            font-size: inherit; }
+            .contents .row .form-wrapper .form-box .cell p label span::before {
+              border: 1px solid #26a69a; }
+            .contents .row .form-wrapper .form-box .cell p label span.with-gap + span {
+              color: red; }

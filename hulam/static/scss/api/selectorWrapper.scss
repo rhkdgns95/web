@@ -1,0 +1,85 @@
+.selector-wrapper {
+  //position: absolute;
+  //left: 0;
+  //top: -50px;
+  //transform: translateY(-100%);
+  margin-top:10px;
+  margin-bottom: 30px;
+  .selector-list {
+    display: flex;
+    .selector-item {
+      //border: 1px solid #dfdfdf;
+      &:first-child {
+        //margin-right: 5px;
+      }
+      &.active,
+      &.current-active {
+        a {
+          color: white;
+          background-color: #00b0d9;
+          &::after {
+            width: 100%;
+            background-color: #0084c5;
+          }
+        }
+      }
+      &:first-child {
+        a::after {
+          left: auto;
+          right: 0;
+        }
+      }
+      a {
+        position: relative;
+        display: block;
+        padding: 18px 40px;
+        background-color: white;
+        transition: background-color .4s;
+        i {
+          margin-right: 10px;
+        }
+        &::after {
+          content:"";
+          position: absolute;
+          //bottom: 0;
+          top: 0;
+          height:5px;
+          //width: 100%;
+
+          width: 0;
+          left: 0;
+          transform: translateY(-100%);
+
+          background-color: #0084c5;
+          transition: all .5s;
+        }
+      }
+    }
+  }
+}
+///////////////////////////// 모바일 시작 05-07
+@media (max-width: 850px) {
+  .selector-wrapper {
+    top: -30px;
+    .selector-list {
+
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .selector-wrapper {
+    .selector-list {
+      .selector-item {
+        a {
+          padding: 12px 25px;
+          font-size: .9em;
+          &::after {
+            height:3px;
+          }
+        }
+      }
+    }
+  }
+}
+///////////////////////////// 모바일 종료 05-07

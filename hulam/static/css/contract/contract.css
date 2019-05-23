@@ -1,0 +1,32 @@
+.contract-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .contract-container .contents {
+    margin-top: 60px; }
+    .contract-container .contents .body-wrapper .btn-box .btn-cell a {
+      font-size: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 60px; }
+      .contract-container .contents .body-wrapper .btn-box .btn-cell a i {
+        margin-right: 16px; }
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header-wrapper .logo-box .logo a {
+    font-size: 2.3em; }
+
+.body-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .body-wrapper .btn-box .btn-cell {
+    margin-bottom: 30px; }

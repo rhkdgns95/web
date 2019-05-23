@@ -1,0 +1,113 @@
+// Effect-2
+
+.selector-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  //left: 0;
+  //top: -50px;
+  //transform: translateY(-100%);
+  .selector-list {
+    display: flex;
+    flex:5;
+    flex-flow: wrap row;
+    justify-content: flex-start;
+    .selector-item {
+      width: (100% /  9) ;
+      //border: 1px solid #dfdfdf;
+      &:first-child {
+        //margin-right: 5px;
+      }
+      &.active,
+      &.current-active {
+        a {
+          color: white;
+          background-color: #00b0d9;
+          &::after,
+          &::before{
+            width: 50%;
+            background-color: #0084c5;
+            height: 5px;
+          }
+        }
+      }
+      a {
+        position: relative;
+        display: block;
+        //padding: 18px 40px;
+        padding: 18px 0;
+        text-align: center;
+        background-color: white;
+        transition: background-color .4s;
+        white-space: nowrap;
+        i {
+          margin-right: 10px;
+        }
+        &::after,
+        &::before {
+          content:"";
+          position: absolute;
+          top: 0;
+          height:0;
+          width: 0;
+          left: 50%;
+          transform: translateY(-100%);
+          background-color: #0084c5;
+          transition: all .5s;
+        }
+        &::after {
+          left: auto;
+          right: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .selector-wrapper {
+    .selector-list {
+      flex-flow: row wrap;
+      .selector-item {
+        a {
+          white-space: nowrap;
+          padding: 18px 10px;
+        }
+      }
+    }
+  }
+}
+
+///////////////////////////// 모바일 시작 05-08
+@media (max-width: 850px) {
+  .selector-wrapper {
+    .selector-list {
+      .selector-item {
+        width: (100% / 2);
+        text-align: center;
+        a {
+          padding: 18px 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .selector-wrapper {
+    .selector-list {
+      .selector-item {
+        a {
+          padding: 12px 25px;
+          font-size: .9em;
+          &::after {
+            height:3px;
+          }
+        }
+      }
+    }
+  }
+}
+///////////////////////////// 모바일 종료 05-08

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+
+    <!-- common css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/api/selectorWrapper2.css">
+    <link rel="stylesheet" href="../static/css/tablePayForm.css">
+    <link rel="stylesheet" href="../static/css/orderFormPay.css">
+
+    <!--    <link rel="stylesheet" href="../static/css/tableFixed.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" TYPE="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!-- header-start -->
+<div class="header">
+    <div class="header-box hide-half" id="header_box">
+        <div class="header-wrap wrap-left">
+            <div class="wrap-header">
+                <span><i class="fa fa-cube" aria-hidden="true"></i> MATERIA</span>
+            </div>
+            <div class="wrap-body">
+                <div class="cell">
+                    <div class="user-box">
+                        <div class="user-img">
+                            <div class="img-box"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="user-info">
+                            <ul>
+                                <li class="user-name"><span class="bold">Robert</span></li>
+                                <li class="user-job"><span>UX DESIGNER</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell collection">
+                    <ul>
+                        <li><a href="./employeeList2.html"><i class="fa fa-user-o" aria-hidden="true"></i> 사원관리</a></li>
+                        <li><a href="./timecardList.html"><i class="fa fa-check-square-o"
+                                                             aria-hidden="true"></i> 근태관리</a></li>
+                        <li><a href="./salaryMSList.html"><i class="fa fa-credit-card" aria-hidden="true"></i> 급여관리</a>
+                        </li>
+                        <li><a href="./annualMaster.html"><i class="fa fa-clock-o" aria-hidden="true"></i> 휴가관리</a></li>
+                        <li><a href="./timeoffList.html"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> 휴직관리</a></li>
+                        <li><a href="./retireList.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 퇴사관리</a></li>
+                        <li><a href="./greetingForm.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> 인사서식</a></li>
+                        <li><a href="./employeeListJoin.html"><i class="fa fa-bell-o" aria-hidden="true"></i> 신청/알림<span class="new badge">7</span></a></li>
+                        <li class="active"><a href="./orderFormPay.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용권구매</a></li>
+                        <li><a href="./webContract.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 전자근로계약</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap wrap-right">
+            <div class="wrap-header">
+                <ul>
+                    <li><a id="menu-btn" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                    <li><a href="./configCompany.html"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="wrap-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-end -->
+
+<div class="contents" id="contents">
+    <div class="selector-wrapper">
+        <ul class="selector-list">
+            <li class="selector-item current-active"><a href="./orderFormPay.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용권구매</a></li>
+            <li class="selector-item"><a href="./orderFormChange.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용권변경</a></li>
+            <li class="selector-item"><a href="./orderFormList.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용내역</a></li>
+        </ul>
+    </div>
+    <div class="contents-box">
+        <div class="contents-title">
+            <h1><span><i class="fa fa-angle-down" aria-hidden="true"></i></span> 이용권구매</h1>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-pay-form">
+                <table>
+                    <thead></thead>
+                    <tbody>
+                        <tr>
+                            <th>사원수</th>
+                            <td>
+                                <div class="input-field col s12">
+                                    <select>
+<!--                                        <option value="" disabled selected>명</option>-->
+                                        <option value="1" selected>10명</option>
+                                        <option value="2">20명</option>
+                                        <option value="3">30명</option>
+                                        <option value="4">40명</option>
+                                        <option value="5">50명</option>
+                                        <option value="6">60명</option>
+                                        <option value="7">70명</option>
+                                        <option value="8">80명</option>
+                                        <option value="9">90명</option>
+                                        <option value="10">100명</option>
+                                    </select>
+                                </div>
+                                <div class="small-description">
+                                    <span> ※100명 초과시 고객센터(1522-6778)로 연락 부탁드립니다.</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이용기간</th>
+                            <td>
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="1" selected>1개월</option>
+                                        <option value="12">12개월</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>솔루션</th>
+                            <td>
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="1" selected>베이직 솔루션</option>
+                                        <option value="12">프리미어 솔루션</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>할인쿠폰</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>결제금액</th>
+                            <td>38,500원 (부가세 3,500원 포함)</td>
+                        </tr>
+                        <tr>
+                            <th>결제방법</th>
+                            <td>신용카드</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="btn-box">
+            <button class="btn waves-effect waves-light" type="submit" name="action">결제하기<i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- header-start -->
+<div class="footer">
+
+
+</div>
+<!-- header-end -->
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../static/js/base.js"></script>
+<script src="../static/js/api/materialize/Select.js"></script>
+<script src="../static/js/api/materialize/TextInput.js"></script>
+<script src="../static/js/api/selectorItem.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+.modal {
+  overflow: hidden;
+  padding: 16px; }
+  .modal .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    .modal .title h4 {
+      font-size: 1.5rem; }
+  .modal .modal-content {
+    position: relative;
+    padding: 0 !important;
+    width: 100%;
+    height: 90%; }
+    .modal .modal-content .drawbox {
+      display: block;
+      background-color: white;
+      border: 1px solid #dfdfdf;
+      margin: 10px;
+      margin: 0 auto;
+      width: 100%; }
+  .modal .modal-footer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    box-sizing: border-box;
+    margin-top: 60px; }
+    .modal .modal-footer a {
+      flex: 1;
+      height: 40px; }
+      .modal .modal-footer a:first-child {
+        margin-right: 1rem; }
+
+.sign-box {
+  border-radius: 6px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 7px 13px 0 rgba(0, 0, 0, 0.14);
+  position: relative;
+  margin-top: 40px;
+  height: 60vh;
+  background-color: #dfdfdf; }
+  .sign-box .sign {
+    position: relative;
+    background-color: white;
+    height: 0;
+    transition: height .3s, height .5s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; }
+    .sign-box .sign button {
+      opacity: 0;
+      transition: all .7s; }
+  .sign-box.active .sign {
+    height: 100%;
+    background-color: #cfe0e0; }
+    .sign-box.active .sign button {
+      opacity: 1; }
+
+.sign-info-text-wrapper {
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #657786; }
+
+.footer {
+  display: flex;
+  height: 10vh; }
+  .footer div {
+    flex: .5;
+    height: 100%; }
+    .footer div button,
+    .footer div .sign-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: none;
+      border-radius: 0;
+      width: 100%;
+      height: 100%; }
+      .footer div button:first-child,
+      .footer div .sign-btn:first-child {
+        border-right: 1px solid #dfdfdf; }

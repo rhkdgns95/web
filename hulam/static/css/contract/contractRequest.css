@@ -1,0 +1,47 @@
+.contract-request-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .contract-request-container .header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .contract-request-container .header-wrapper .logo-box .logo a {
+      font-size: 2.3em; }
+  .contract-request-container .info-text {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; }
+    .contract-request-container .info-text h4 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold; }
+  .contract-request-container .body-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .contract-request-container .footer {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    height: 10vh; }
+    .contract-request-container .footer .btn-box {
+      width: 100%;
+      height: 100%; }
+      .contract-request-container .footer .btn-box button {
+        width: inherit;
+        height: inherit;
+        display: flex; }
+        .contract-request-container .footer .btn-box button a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          color: white; }
+        .contract-request-container .footer .btn-box button span {
+          margin-right: -20px; }

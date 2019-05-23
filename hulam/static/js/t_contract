@@ -1,0 +1,33 @@
+
+const MOBILE_SIZE = 700;
+
+var menuBtn = document.getElementById('menu-btn');
+var header = document.getElementById('header_box');
+var contents = document.getElementById('contents');
+
+function isMobile () {
+    return window.innerWidth <= MOBILE_SIZE;
+}
+
+if(isMobile()) {
+    // menuBtn.click();
+} else {
+    document.getElementsByClassName('header-box').item(0).classList.toggle('hide-half');
+}
+
+menuBtn.addEventListener('click', function(e) {
+    header.classList.toggle('hide-half');
+    contents.classList.toggle('hide-half');
+});
+
+setTimeout(function() {
+    var contentsBox = document.getElementsByClassName('contents-box');
+    [].forEach.call(contentsBox, function(box) {
+        box.classList.add('active');
+    })
+    // contentsBox[0].classList.add('active');
+}, 200);
+
+
+
+

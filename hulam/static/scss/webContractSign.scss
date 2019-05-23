@@ -1,0 +1,122 @@
+
+@mixin signBox {
+  margin: 50px auto;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+@mixin sign {
+  border:1px solid #dfdfdf;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.24), 0 3px 6px rgba(0,0,0,.34);
+}
+@mixin btnWrapper {
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .btn {
+    position: relative;
+    width: 30%;
+    max-width: 250px;
+    cursor: pointer;
+    &#btn_cancel {
+      background-color: red;
+    }
+    &#btn_sign {
+      margin-left: 10px;
+      background-color: #1cab62;
+    }
+    &::after {
+      content:"";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      transition: height .4s;
+      transition-timing-function: ease-in-out;
+      background-color: rgba(250,250,250,.2);
+    }
+    &:hover {
+      &::after {
+        height: 100%;
+      }
+    }
+  }
+}
+@mixin modal{
+  height: 680px;
+  max-height: 80% !important;
+  max-width: auto;
+  box-sizing: border-box;
+  margin:0 auto;
+  background-color: #eae9e9;
+  .modal-title {
+    display:flex;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+    i {
+      color: #7c7c7c;
+    }
+    span {
+      color: #7c7c7c;
+      font-size: 1.2em;
+      font-weight:bold;
+      margin-left: 10px;
+    }
+  }
+  .modal-content {
+    display: block;
+    background-color: #f4f4f4;
+    width: 90%;
+    margin:0 auto;
+    border-radius: 10px;
+    height:80%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border: 1px solid #dfdfdf;
+    padding: 0 !important;
+    box-shadow: 0 3px 2px rgba(0,0,0,.22), 0 4px 4px rgba(0,0,0,.32);
+  }
+  .modal-footer {
+    background-color: #eae9e9;
+    display: flex;
+    margin: 10px 0;
+    height: 48px !important;
+    box-sizing: border-box;
+    justify-content: center;
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      max-width: 200px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white;
+      }
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+.modal {
+  @include modal;
+}
+.sign-box {
+  @include signBox;
+
+  .sign {
+    @include sign;
+  }
+  .btn-wrapper {
+    @include btnWrapper;
+  }
+}
+

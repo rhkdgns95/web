@@ -1,0 +1,88 @@
+.modal {
+  height: 680px;
+  max-height: 80% !important;
+  max-width: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #eae9e9; }
+  .modal .modal-title {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto; }
+    .modal .modal-title i {
+      color: #7c7c7c; }
+    .modal .modal-title span {
+      color: #7c7c7c;
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-left: 10px; }
+  .modal .modal-content {
+    display: block;
+    background-color: #f4f4f4;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 80%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border: 1px solid #dfdfdf;
+    padding: 0 !important;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.22), 0 4px 4px rgba(0, 0, 0, 0.32); }
+  .modal .modal-footer {
+    background-color: #eae9e9;
+    display: flex;
+    margin: 10px 0;
+    height: 48px !important;
+    box-sizing: border-box;
+    justify-content: center; }
+    .modal .modal-footer .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      max-width: 200px; }
+      .modal .modal-footer .btn a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white; }
+      .modal .modal-footer .btn:first-child {
+        margin-right: 15px; }
+
+.sign-box {
+  margin: 50px auto;
+  margin-bottom: 10px;
+  width: 95%; }
+  .sign-box .sign {
+    border: 1px solid #dfdfdf;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24), 0 3px 6px rgba(0, 0, 0, 0.34); }
+  .sign-box .btn-wrapper {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .sign-box .btn-wrapper .btn {
+      position: relative;
+      width: 30%;
+      max-width: 250px;
+      cursor: pointer; }
+      .sign-box .btn-wrapper .btn#btn_cancel {
+        background-color: red; }
+      .sign-box .btn-wrapper .btn#btn_sign {
+        margin-left: 10px;
+        background-color: #1cab62; }
+      .sign-box .btn-wrapper .btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: height .4s;
+        transition-timing-function: ease-in-out;
+        background-color: rgba(250, 250, 250, 0.2); }
+      .sign-box .btn-wrapper .btn:hover::after {
+        height: 100%; }

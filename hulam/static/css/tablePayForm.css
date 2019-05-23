@@ -1,0 +1,24 @@
+.table-pay-form table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #dfdfdf;
+  border-left: 0;
+  border-right: 0; }
+  .table-pay-form table tr th {
+    width: 30%;
+    text-align: center;
+    font-size: .9em;
+    border-right: .4px solid #dfdfdf; }
+  .table-pay-form table tr td {
+    font-size: .8em;
+    padding-left: 30px; }
+    .table-pay-form table tr td .input-field {
+      margin: 0; }
+      .table-pay-form table tr td .input-field .select-dropdown {
+        margin: 0;
+        font-size: inherit; }
+        .table-pay-form table tr td .input-field .select-dropdown span {
+          font-size: inherit; }
+    .table-pay-form table tr td .small-description span {
+      font-size: .9em;
+      color: red; }

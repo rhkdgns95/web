@@ -1,0 +1,36 @@
+#form_wrapper {
+  height: 100vh; }
+  #form_wrapper .contents-box {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); }
+    #form_wrapper .contents-box table {
+      border: 2px solid #dfdfdf;
+      border-spacing: 0;
+      border-collapse: collapse;
+      border: 1px solid #dfdfdf; }
+      #form_wrapper .contents-box table tr th {
+        text-align: center;
+        background-color: #ffecec;
+        border: 1px solid #dfdfdf; }
+      #form_wrapper .contents-box table tr td {
+        border: 1px solid #dfdfdf;
+        text-align: center;
+        background-color: white; }
+        #form_wrapper .contents-box table tr td input {
+          max-width: 100px; }
+          #form_wrapper .contents-box table tr td input::placeholder {
+            font-size: .9em; }
+
+.img-wrapper {
+  border: 2px solid green;
+  height: 300px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .img-wrapper .img-box {
+    width: 200px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.4); }
+    .img-wrapper .img-box img {
+      display: block;
+      width: 100%;
+      border: 2px solid gray; }

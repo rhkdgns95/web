@@ -1,0 +1,105 @@
+@mixin row {
+  background-color: white;
+
+  width: 90%;
+  margin: 30px auto;
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 2px 2px rgba(0,0,0,.34);
+  border:1px solid #dfdfdf;
+  padding: 20px;
+  border-radius: 6px;
+}
+@mixin contentsWrapper {
+  border:2px solid red;
+  display :block;
+  height: auto;
+  margin-bottom: 100px;
+  .input-title {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 1.5em;
+    i {
+      margin-right: 10px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+  }
+  .input-field {
+    padding-top: 5px;
+    border:1px solid #26a69a;
+    display :block;
+  }
+}
+@mixin formWrapper {
+  position: relative;
+  overflow:hidden;
+}
+@mixin formBox {
+  border: 1px solid green;
+  height: 300px;
+  width: 100%;
+  opacity: 0;
+  height: 0;
+  transform: scale(.1);
+  transition: opacity .3s, transform .4s;
+  &.active {
+    transform: scale(1);
+    transition: opacity .4s, transform .6s;
+    opacity: 1;
+    height: 100%;
+  }
+  .cell {
+    &.agree-cell {
+      margin-bottom: 15px;
+    }
+    table {
+
+    }
+    p {
+      padding: 0 10px;
+      font-size: .8em;
+      width: 100%;
+      &.cell-title {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      input[type=text] {
+        width: 200px;
+        height: 25px;
+        margin-bottom: 0;
+        font-size: 1em;
+      }
+      .span-bracket {
+        color: #969696;
+        font-size: .9em;
+      }
+      label {
+        input[type=radio] {
+
+        }
+        span {
+          padding-left: 25px;
+          font-size: inherit;
+          &::before {
+            border:1px solid #26a69a;
+          }
+          &.with-gap {
+            &+span {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.contents {
+  border: 1px solid red;
+  .row {
+    @include row;
+    .contents-wrapper { @include contentsWrapper; }
+    .form-wrapper { @include formWrapper; .form-box { @include formBox; } }
+  }
+}

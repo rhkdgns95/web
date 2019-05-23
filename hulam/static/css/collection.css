@@ -1,0 +1,28 @@
+.contents .collection {
+  margin: 0;
+  margin-top: 15px !important;
+  margin-bottom: 30px !important;
+  overflow: visible;
+  border-radius: 0;
+  border: 0;
+  width: 100% !important;
+  position: relative !important; }
+  .contents .collection .selector-item {
+    width: auto; }
+    .contents .collection .selector-item a {
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: left; }
+    .contents .collection .selector-item .collection-item {
+      width: auto;
+      line-height: inherit; }
+      .contents .collection .selector-item .collection-item:not(.active):hover {
+        color: #039be5;
+        background-color: #00b0d9; }
+      .contents .collection .selector-item .collection-item:hover {
+        background-color: #dfdfdf;
+        color: white !important; }
+
+@media (max-width: 650px) {
+  .collection .badge {
+    font-size: .5em !important; } }

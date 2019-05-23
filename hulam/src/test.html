@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+
+    <!-- common css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+<!--    <link rel="stylesheet" href="../static/css/app.css">-->
+<!--    <link rel="stylesheet" href="../static/css/employeeList2.css">-->
+    <link rel="stylesheet" href="../static/css/tableFixed.css">
+    <link rel="stylesheet" href="../static/css/test.css">
+<!--    <link rel="stylesheet" href="../static/css/api/selectorWrapper.css">-->
+
+    <!--  pdf print    -->
+    <link rel="stylesheet" href="../static/css/api/print.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/api/print.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="contents-wrapper" id="form_wrapper">
+    <h1>출력하는 입력 페이지입니다</h1>
+    <div class="contents-box">
+        <table>
+            <thead>
+            <tr>
+                <th>사원번호</th>
+                <th>이름</th>
+                <th>나이</th>
+                <th>이메일</th>
+                <th>회사명</th>
+                <th>주소</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>201433043</td>
+                <td>김용식</td>
+                <td>27</td>
+                <td>dydtlr17@gmail.com</td>
+                <td>휴렘</td>
+                <td>대전 대덕구</td>
+            </tr>
+            <tr>
+                <td>2014333043</td>
+                <td>박태환</td>
+                <td>31</td>
+                <td>xoghks2@naver.com</td>
+                <td>카카오</td>
+                <td>서울 구로구</td>
+            </tr>
+            <tr>
+                <td>1034333043</td>
+                <td>김진수</td>
+                <td>17</td>
+                <td>wlstn2@daum.net</td>
+                <td>SK</td>
+                <td>경남 합천</td>
+            </tr>
+            <tr>
+                <td>34423043</td>
+                <td>이용희</td>
+                <td>41</td>
+                <td>dydgml@yahoo.co.kr</td>
+                <td>구글</td>
+                <td>대구 달서구</td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="사원번호"></td>
+                <td><input type="text" placeholder="이름"></td>
+                <td><input type="text" placeholder="나이"></td>
+                <td><input type="text" placeholder="이메일"></td>
+                <td><input type="text" placeholder="회사명"></td>
+                <td><input type="text" placeholder="주소"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="사원번호"></td>
+                <td><input type="text" placeholder="이름"></td>
+                <td><input type="text" placeholder="나이"></td>
+                <td><input type="text" placeholder="이메일"></td>
+                <td><input type="text" placeholder="회사명"></td>
+                <td><input type="text" placeholder="주소"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="사원번호"></td>
+                <td><input type="text" placeholder="이름"></td>
+                <td><input type="text" placeholder="나이"></td>
+                <td><input type="text" placeholder="이메일"></td>
+                <td><input type="text" placeholder="회사명"></td>
+                <td><input type="text" placeholder="주소"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="사원번호"></td>
+                <td><input type="text" placeholder="이름"></td>
+                <td><input type="text" placeholder="나이"></td>
+                <td><input type="text" placeholder="이메일"></td>
+                <td><input type="text" placeholder="회사명"></td>
+                <td><input type="text" placeholder="주소"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="사원번호"></td>
+                <td><input type="text" placeholder="이름"></td>
+                <td><input type="text" placeholder="나이"></td>
+                <td><input type="text" placeholder="이메일"></td>
+                <td><input type="text" placeholder="회사명"></td>
+                <td><input type="text" placeholder="주소"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="img-wrapper">
+    <div id="img_box" class="img-box">
+        <img id="img_type" src="../static/images/logo/logo.png" alt="">
+    </div>
+</div>
+<button type="button" onclick="printJS({ printable: 'form_wrapper',
+        type: 'html',
+        header: 'PrintJS - Form Element Selection',
+        showModal: true,
+        css:'../static/css/test.css',
+        scanStyles: true})">
+    Print Form with Header
+</button>
+
+<button type="button" onclick="printJS({ printable: 'img_type',
+        type: 'html',
+        header: 'PrintJS - Form Element Selection',
+        showModal: true,
+        css:'../static/css/test.css',
+        scanStyles: true})
+">
+    image print button
+</button>
+<div class="footer">
+
+
+</div>
+<!-- header-end -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../static/js/api/materialize/Select.js"></script>
+<script src="../static/js/api/materialize/TextInput.js"></script>
+<script src="../static/js/api/selectorItem.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+<!-- pdf출력하기.   -->
+</body>
+</html>

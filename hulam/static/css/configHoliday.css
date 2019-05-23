@@ -1,0 +1,172 @@
+@charset "UTF-8";
+.holiday-wrapper .contract-type-table-wrapper.holiday-support-type {
+  border-top: 2px solid #00b0d9;
+  display: flex;
+  flex-flow: row wrap;
+  border-left: 1px solid #dfdfdf; }
+  .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell {
+    width: 10%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf; }
+    .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell ul li:nth-of-type(1) {
+      font-size: .9em;
+      color: #e48917; }
+    .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell ul li:nth-of-type(2) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell ul li:nth-of-type(2) input {
+        font-size: .9em;
+        max-width: 70px;
+        border-left: none;
+        border-right: none; }
+        .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell ul li:nth-of-type(2) input:focus {
+          box-shadow: none; }
+          .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell ul li:nth-of-type(2) input:focus + span {
+            color: #26a69a; }
+
+.holiday-wrapper .btn-box {
+  margin: 50px auto;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.contract-type-table-wrapper table {
+  border-top: 2px solid #00b0d9;
+  margin: 35px 0; }
+  .contract-type-table-wrapper table tbody tr th {
+    white-space: nowrap;
+    border-right: 1px solid #dfdfdf;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em; }
+    .contract-type-table-wrapper table tbody tr th:not(:first-child) {
+      border-left: 1px solid #dfdfdf; }
+  .contract-type-table-wrapper table tbody tr td {
+    padding: 10px;
+    font-size: .9em; }
+    .contract-type-table-wrapper table tbody tr td a i {
+      color: #00b0ff; }
+    .contract-type-table-wrapper table tbody tr td .with-gap:checked + span {
+      color: black; }
+      .contract-type-table-wrapper table tbody tr td .with-gap:checked + span::after {
+        border: 2px solid dodgerblue;
+        background-color: dodgerblue; }
+      .contract-type-table-wrapper table tbody tr td .with-gap:checked + span::before {
+        border: 2px solid dodgerblue; }
+    .contract-type-table-wrapper table tbody tr td.td-input-box {
+      display: flex;
+      align-items: center; }
+      .contract-type-table-wrapper table tbody tr td.td-input-box .time-distribute {
+        padding: 0 10px; }
+      .contract-type-table-wrapper table tbody tr td.td-input-box .input-field .select-wrapper {
+        max-width: 50px; }
+        .contract-type-table-wrapper table tbody tr td.td-input-box .input-field .select-wrapper input {
+          font-size: 1.1em;
+          box-sizing: border-box;
+          margin-bottom: 0; }
+      .contract-type-table-wrapper table tbody tr td.td-input-box p {
+        margin-left: 10px; }
+    .contract-type-table-wrapper table tbody tr td.icon-td {
+      white-space: nowrap; }
+      .contract-type-table-wrapper table tbody tr td.icon-td a {
+        position: relative;
+        color: gray; }
+        .contract-type-table-wrapper table tbody tr td.icon-td a:first-child {
+          margin-right: 5px; }
+        .contract-type-table-wrapper table tbody tr td.icon-td a i {
+          font-size: 1.3em;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.34); }
+        .contract-type-table-wrapper table tbody tr td.icon-td a::after {
+          position: absolute;
+          opacity: 0;
+          top: -50%;
+          transform: translate(-50%, -100%);
+          left: 50%;
+          border-radius: 7px;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.34);
+          font-size: .9em;
+          width: 0;
+          height: 0;
+          color: white;
+          background-color: #00b0ff;
+          padding: 3px 15px;
+          white-space: nowrap;
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); }
+        .contract-type-table-wrapper table tbody tr td.icon-td a::before {
+          z-index: 2;
+          opacity: 0;
+          content: "";
+          position: absolute;
+          top: -100%;
+          left: 50%;
+          transform: translateX(-50%);
+          border-top: 10px solid #00b0ff;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid transparent; }
+        .contract-type-table-wrapper table tbody tr td.icon-td a.a-delete::after {
+          content: "삭제"; }
+        .contract-type-table-wrapper table tbody tr td.icon-td a.a-modify::after {
+          content: "수정"; }
+        .contract-type-table-wrapper table tbody tr td.icon-td a:hover {
+          color: #00b0ff; }
+          .contract-type-table-wrapper table tbody tr td.icon-td a:hover::after {
+            top: -70%;
+            opacity: 1;
+            width: auto;
+            height: auto;
+            transition: all .2s; }
+          .contract-type-table-wrapper table tbody tr td.icon-td a:hover::before {
+            transition: all .3s;
+            opacity: 1; }
+    .contract-type-table-wrapper table tbody tr td p {
+      text-align: left; }
+    .contract-type-table-wrapper table tbody tr td span {
+      font-size: 1.1em !important;
+      display: flex !important;
+      align-items: center; }
+      .contract-type-table-wrapper table tbody tr td span::after, .contract-type-table-wrapper table tbody tr td span::before {
+        top: 10%;
+        width: 13px;
+        height: 13px; }
+
+.contract-type-table-wrapper .small-description {
+  font-size: .9em;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.contract-type-table-wrapper .btn-box {
+  margin: 0 auto;
+  text-align: center; }
+
+.contents-box2 {
+  margin-top: 5px; }
+  .contents-box2 table tr th {
+    text-align: center;
+    white-space: nowrap; }
+  .contents-box2 table tr td {
+    text-align: center; }
+
+@media (max-width: 1400px) {
+  .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell {
+    width: 20%; }
+    .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell input {
+      width: 50px !important; } }
+
+@media (max-width: 1100px) {
+  .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell {
+    width: 25%; }
+    .holiday-wrapper .contract-type-table-wrapper.holiday-support-type > .cell input {
+      width: 30px !important; } }
+
+@media (max-width: 650px) {
+  .holiday-wrapper .contract-type-table-wrapper.holiday-support-type .cell ul li:nth-of-type(1) {
+    font-size: .7em; }
+  .contract-type-table-wrapper table {
+    font-size: .8em; }
+    .contract-type-table-wrapper table tbody.question-tbody td div {
+      display: block; }
+      .contract-type-table-wrapper table tbody.question-tbody td div p {
+        margin-top: 5px; } }

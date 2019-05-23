@@ -1,0 +1,66 @@
+
+@mixin headerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin logo{
+  a {
+    font-size: 2.3em;
+  }
+}
+
+@mixin btnBox {
+  .btn-cell {
+    margin-bottom: 30px;
+  }
+}
+@mixin bodyWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contract-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .contents {
+    margin-top: 60px;
+    .body-wrapper {
+      .btn-box {
+        .btn-cell {
+          a {
+            font-size: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            i {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.header-wrapper {
+  @include headerWrapper;
+  .logo-box {
+    .logo {
+      @include logo;
+    }
+  }
+}
+
+.body-wrapper {
+  @include bodyWrapper;
+  .btn-box {
+    @include btnBox;
+  }
+}

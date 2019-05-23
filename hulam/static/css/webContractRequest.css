@@ -1,0 +1,26 @@
+.intro-title {
+  position: relative;
+  margin-bottom: 50px;
+  font-size: 1.2em; }
+  .intro-title::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    width: 5px;
+    height: 100%;
+    background-color: #f62e0e; }
+
+.intro-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; }
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: 20px; }

@@ -1,0 +1,165 @@
+.form-wrapper {
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.24), 0 3px 4px rgba(0, 0, 0, 0.34);
+  border-radius: 6px;
+  background-color: white;
+  width: 90%;
+  margin: 30px auto;
+  max-width: 900px; }
+  .form-wrapper .title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 40px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #525252; }
+    .form-wrapper .title i {
+      margin-right: 10px;
+      border-radius: 50%;
+      padding: 5px;
+      border: 1px solid #26a69a;
+      color: #26a69a;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 2px 3px rgba(0, 0, 0, 0.4); }
+  .form-wrapper .form-box form {
+    display: flex;
+    flex-flow: row wrap; }
+    .form-wrapper .form-box form .list {
+      width: 50%; }
+      .form-wrapper .form-box form .list.list-width-full {
+        width: 100%; }
+    @media (max-width: 600px) {
+      .form-wrapper .form-box form {
+        display: block; }
+        .form-wrapper .form-box form .list {
+          width: 100%; } }
+    .form-wrapper .form-box form .list {
+      padding: 15px;
+      box-sizing: border-box; }
+      .form-wrapper .form-box form .list:nth-of-type(4) .list-intro {
+        margin-bottom: 40px; }
+      .form-wrapper .form-box form .list:nth-of-type(4) .cell label {
+        top: -10px; }
+      .form-wrapper .form-box form .list .cell {
+        margin-bottom: 30px;
+        position: relative; }
+        .form-wrapper .form-box form .list .cell.cell-company-register-code {
+          display: flex;
+          justify-content: space-between;
+          max-width: 350px; }
+          .form-wrapper .form-box form .list .cell.cell-company-register-code div {
+            display: flex;
+            align-items: center;
+            padding: 0 7px; }
+          .form-wrapper .form-box form .list .cell.cell-company-register-code input {
+            padding: 0 5px;
+            max-width: 90px; }
+        .form-wrapper .form-box form .list .cell.cell-company-address #address_code {
+          display: inline-block;
+          width: 130px;
+          box-sizing: border-box; }
+        .form-wrapper .form-box form .list .cell.cell-company-address #btn_address {
+          box-sizing: border-box;
+          margin-left: 10px; }
+        .form-wrapper .form-box form .list .cell.cell-company-search {
+          display: flex;
+          align-items: center; }
+          .form-wrapper .form-box form .list .cell.cell-company-search input {
+            max-width: 200px; }
+          .form-wrapper .form-box form .list .cell.cell-company-search #btn_search {
+            margin-left: 8px;
+            width: 70px; }
+        .form-wrapper .form-box form .list .cell .cell-setting {
+          color: black; }
+        .form-wrapper .form-box form .list .cell input {
+          margin-top: 10px; }
+          .form-wrapper .form-box form .list .cell input:focus ~ label {
+            color: #26a69a; }
+          .form-wrapper .form-box form .list .cell input::placeholder {
+            font-size: .8em; }
+        .form-wrapper .form-box form .list .cell > label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-100%);
+          font-size: .93em;
+          color: lightslategray; }
+        .form-wrapper .form-box form .list .cell p {
+          margin-top: 10px; }
+      .form-wrapper .form-box form .list .cell-box {
+        display: flex; }
+        .form-wrapper .form-box form .list .cell-box .cell {
+          width: 50%; }
+          .form-wrapper .form-box form .list .cell-box .cell:first-child {
+            margin-right: 20px; }
+          .form-wrapper .form-box form .list .cell-box .cell.cell-work-time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            white-space: nowrap; }
+            .form-wrapper .form-box form .list .cell-box .cell.cell-work-time input {
+              padding: 0 5px; }
+          .form-wrapper .form-box form .list .cell-box .cell.cell-add-file {
+            padding-top: 20px;
+            box-sizing: border-box; }
+            .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found a {
+              margin: 10px; }
+            .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field {
+              display: flex;
+              flex-flow: row wrap;
+              width: 125px; }
+              .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field .file-path-wrapper {
+                padding-left: 0; }
+                .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field .file-path-wrapper .file-path {
+                  box-sizing: border-box;
+                  border: 1px solid gray;
+                  margin: 0;
+                  font-size: .8em;
+                  padding-left: 5px;
+                  margin-bottom: 10px; }
+                  .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field .file-path-wrapper .file-path.invalid {
+                    background-color: #fff8ee;
+                    color: #868686;
+                    box-shadow: none; }
+              .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                height: 2em;
+                line-height: 2em;
+                padding: 15px; }
+                .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field .btn i {
+                  font-size: 1em; }
+                .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .cell-file-found .file-field .btn input {
+                  margin: 0; }
+            .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .img-box {
+              overflow: hidden;
+              width: 125px;
+              height: 125px;
+              padding: 10px;
+              border: 1px solid gray;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              .form-wrapper .form-box form .list .cell-box .cell.cell-add-file .img-box img {
+                width: 100%;
+                display: block; }
+      .form-wrapper .form-box form .list .list-intro {
+        display: flex;
+        align-items: center;
+        font-size: .9em;
+        color: #7c8b86;
+        margin: 30px 0 40px 0;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #1ebaac; }
+        .form-wrapper .form-box form .list .list-intro i {
+          font-size: 1.2em;
+          color: #1ebaac;
+          margin-right: 5px; }
+    .form-wrapper .form-box form .bottom-menu {
+      text-align: center;
+      margin: 50px auto; }

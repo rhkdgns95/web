@@ -1,0 +1,42 @@
+.contents {
+  .collection {
+    margin: 0;
+    margin-top: 15px !important;
+    margin-bottom: 30px !important;
+    overflow: visible;
+    border-radius: 0;
+    border: 0;
+    width: 100% !important;
+    position: relative !important;
+    .selector-item {
+      width: auto;
+
+      a {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: left;
+      }
+      .collection-item {
+        width: auto;
+        line-height: inherit;
+        &:not(.active) {
+          &:hover {
+            color: #039be5;
+            background-color: #00b0d9;
+          }
+        }
+        &:hover {
+          background-color: #dfdfdf;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .collection {
+    .badge {
+      font-size: .5em !important;
+    }
+  }
+}

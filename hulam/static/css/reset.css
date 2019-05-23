@@ -1,0 +1,35 @@
+html {
+  height: 100%; }
+
+body {
+  height: auto; }
+
+html, body, ul, li, p {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+body {
+  font-family: Noto Sans kr, sans-serif;
+  background-color: #efefef; }
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: inherit; }
+
+.contents {
+  position: relative;
+  z-index: 1; }
+
+.color-red {
+  color: red; }
+
+.color-blue {
+  color: blue; }
+
+.color-gray {
+  color: darkgray; }
+
+.font-bold {
+  font-weight: bold; }

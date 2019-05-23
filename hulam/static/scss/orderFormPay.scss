@@ -1,0 +1,27 @@
+@import "./mixin/contentsBox";
+@import "./mixin/contentsList";
+@import "./mixin/contentsTitle";
+
+@mixin mediaBtn($value) {
+  @if $value <= 560 {
+    button {
+      font-size: .5em;
+    }
+  } @else {
+    button {
+      font-size: .8em;
+    }
+  }
+}
+
+.btn-box {
+  margin: 60px 0 50px 0 !important;
+  text-align: center !important;
+  @include mediaBtn(570);
+}
+@media(max-width: 560px) {
+  .btn-box {
+    margin: 30px 0 20px 0 !important;
+    @include mediaBtn(560);
+  }
+}

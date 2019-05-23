@@ -1,0 +1,182 @@
+@mixin iconTd {
+  white-space:nowrap;
+  a {
+    position: relative;
+    color: gray;
+
+    &:first-child{
+      margin-right: 5px;
+    }
+    i {
+      font-size: 1.3em;
+    }
+    &::after {
+      position: absolute;
+      opacity: 0;
+      top: -50%;
+      transform: translate(-50%, -100%);
+      left: 50%;
+      border-radius: 7px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,.34);
+      font-size: .9em;
+      width: 0;
+      height: 0;
+      color: white;
+      background-color: #00b0ff;
+      padding: 3px 15px;
+      white-space:nowrap;
+      box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    }
+    &::before {
+      z-index: 2;
+      opacity: 0;
+      content:"";
+      position :absolute;
+      top: -100%;
+      left: 50%;
+      transform:translateX(-50%);
+      border-top: 10px solid #00b0ff;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid transparent;
+    }
+    &.a-delete {
+      &::after {
+        content:"삭제";
+      }
+    }
+    &.a-modify {
+      &::after {
+        content:"수정"
+      }
+    }
+    &:hover {
+      color: #00b0ff;
+      &::after {
+        top: -70%;
+        opacity: 1;
+        width: auto;
+        height: auto;
+        transition: all .2s;
+
+      }
+      &::before {
+        transition: all .3s;
+
+        opacity: 1;
+      }
+    }
+  }
+}
+.contract-type-table-wrapper {
+  table {
+    border-top: 2px solid #00b0d9;
+    margin: 35px 0;
+    tbody {
+      tr {
+        th {
+          white-space:nowrap;
+          border-right: 1px solid #dfdfdf;
+          padding: 10px;
+          text-align: center;
+          font-size: 1em;
+        }
+        td {
+          padding: 10px;
+          font-size: .9em;
+          &.td-input-box {
+            display: flex;
+            align-items: center;
+            .time-distribute {
+              padding: 0 10px;
+            }
+            .input-field {
+                .select-wrapper {
+                  max-width: 50px;
+                input {
+                  //padding-left: 10px;
+                  font-size: 1.1em;
+                  box-sizing:border-box;
+                  margin-bottom: 0;
+                }
+              }
+            }
+            p {
+              margin-left: 10px;
+            }
+          }
+
+          &.icon-td {
+            @include iconTd;
+          }
+          p {
+            text-align: left;
+          }
+          span {
+            font-size: 1.1em !important;
+            display: flex !important;
+            align-items: center;
+            &::after,
+            &::before {
+              top: 10%;
+              width: 13px;
+              height: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .small-description {
+    font-size: .9em;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .btn-box {
+    margin:0 auto;
+    text-align: center;
+  }
+}
+
+.contents-box2 {
+  margin-top: 5px;
+  table {
+    tr {
+
+      th {
+        text-align: center;
+        white-space: nowrap;
+      }
+      td {
+        text-align: center;
+      }
+
+    }
+    tbody {
+      tr {
+        &:nth-of-type(2n + 1) {
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .contract-type-table-wrapper {
+    table {
+      font-size: .8em;
+      tr {
+        td {
+          .select-wrapper {
+            .caret {
+              right: -10px;
+            }
+        }
+        }
+        th {
+          //width: 100px !important;
+        }
+      }
+    }
+  }
+}

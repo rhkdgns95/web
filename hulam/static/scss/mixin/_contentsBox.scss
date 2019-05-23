@@ -1,0 +1,10 @@
+@mixin contents-box {
+    height: auto;
+    background-color: white;
+    padding:30px;
+    padding-top: 0;
+    // box-shadow: 0 5px 20px rgba(0,0,0,0.23), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border: 1px solid #dfdfdf;
+    width:100%;
+    box-sizing: border-box;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+
+    <!-- common css -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/api/selectorWrapper2.css">
+    <link rel="stylesheet" href="../static/css/configTimecard.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" TYPE="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!-- header-start -->
+<div class="header">
+    <div class="header-box hide-half" id="header_box">
+        <div class="header-wrap wrap-left">
+            <div class="wrap-header">
+                <span><i class="fa fa-cube" aria-hidden="true"></i> MATERIA</span>
+            </div>
+            <div class="wrap-body">
+                <div class="cell">
+                    <div class="user-box">
+                        <div class="user-img">
+                            <div class="img-box"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+                        </div>
+                        <div class="user-info">
+                            <ul>
+                                <li class="user-name"><span class="bold">Robert</span></li>
+                                <li class="user-job"><span>UX DESIGNER</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell collection">
+                    <ul>
+                        <li><a href="./employeeList2.html"><i class="fa fa-user-o" aria-hidden="true"></i> 사원관리</a></li>
+                        <li><a href="./timecardList.html"><i class="fa fa-check-square-o" aria-hidden="true"></i> 근태관리</a></li>
+                        <li><a href="./salaryMSList.html"><i class="fa fa-credit-card" aria-hidden="true"></i> 급여관리</a></li>
+                        <li><a href="./annualMaster.html"><i class="fa fa-clock-o" aria-hidden="true"></i> 휴가관리</a></li>
+                        <li><a href="./timeoffList.html"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> 휴직관리</a></li>
+                        <li><a href="./retireList.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 퇴사관리</a></li>
+                        <li><a href="./greetingForm.html"><i class="fa fa-file-text-o" aria-hidden="true"></i> 인사서식</a></li>
+                        <li><a href="./employeeListJoin.html"><i class="fa fa-bell-o" aria-hidden="true"></i> 신청/알림<span class="new badge">7</span></a></li>
+                        <li><a href="./orderFormPay.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 이용권구매</a></li>
+                        <li><a href="./webContract.html"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> 전자근로계약</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrap wrap-right">
+            <div class="wrap-header">
+                <ul>
+                    <li><a id="menu-btn" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+                    <li><a class="active" href="./configCompany.html"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="wrap-body">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- header-end -->
+
+<div class="contents" id="contents">
+    <div class="selector-wrapper">
+        <ul class="selector-list">
+            <li class="selector-item"><a href="./configCompany.html"><i class="fa fa-id-badge" aria-hidden="true"></i>회사정보</a></li>
+            <li class="selector-item"><a href="./configEmployee.html"><i class="fa fa-id-badge" aria-hidden="true"></i>사원관리</a></li>
+            <li class="selector-item current-active"><a href="./configTimecard.html"><i class="fa fa-id-badge" aria-hidden="true"></i>근태관리</a></li>
+            <li class="selector-item "><a href="./configSalary.html"><i class="fa fa-id-badge" aria-hidden="true"></i>급여관리</a></li>
+            <li class="selector-item "><a href="./configHoliday.html"><i class="fa fa-id-badge" aria-hidden="true"></i>휴가관리</a></li>
+            <li class="selector-item "><a href="#"><i class="fa fa-id-badge" aria-hidden="true"></i>법정교육알림</a></li>
+            <li class="selector-item "><a href="#"><i class="fa fa-id-badge" aria-hidden="true"></i>관리권한설정</a></li>
+        </ul>
+    </div>
+
+    <div class="contents-box">
+        <div class="contents-title">
+            <h1><span><i class="fa fa-angle-down" aria-hidden="true"></i></span> 근태설정</h1>
+        </div>
+
+        <div>
+            <div class="contract-type-table-wrapper">
+                <table>
+                    <thead></thead>
+                    <tbody>
+                    <tr>
+                        <th>입력방식</th>
+                        <td>
+                            <label>
+                                <input class="with-gap" name="print_type" type="radio" checked />
+                                <span>수동(직접입력)</span>
+                            </label>
+                            <label>
+                                <input class="with-gap" name="print_type" type="radio"  />
+                                <span>자동(근로계약과 연동)</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>사원용 근태관리 숨기기</th>
+                        <td>
+                            <label>
+                                <input class="with-gap" name="contract_type" type="radio" checked />
+                                <span>숨기기</span>
+                            </label>
+                            <label>
+                                <input class="with-gap" name="contract_type" type="radio"  />
+                                <span>보이기</span>
+                            </label>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="btn-box"><a class="waves-effect waves-light btn-small">확인</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contents-box contents-box2">
+        <div class="contents-title">
+            <h1><span><i class="fa fa-angle-down" aria-hidden="true"></i></span> 근태업로드 설정</h1>
+        </div>
+
+        <div>
+            <div class="contract-type-table-wrapper">
+                <table>
+                   <thead></thead>
+                    <tbody>
+                        <tr>
+                            <th>출근시간 지정</th>
+                            <td class="td-input-box">
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="00" selected>00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                    </select>
+                                    <label>시</label>
+                                </div>
+                                <div class="time-distribute"><span>:</span></div>
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="00" selected>00</option>
+                                        <option value="00" selected>00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                    </select>
+                                    <label>분</label>
+                                </div>
+                                <p class="color-red">* 지정한 시간 이전으로 업로드시 지정한 시간으로 저장됩니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>퇴근시간 지정</th>
+                            <td class="td-input-box">
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="00" selected>00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                    </select>
+                                    <label>시</label>
+                                </div>
+                                <div class="time-distribute"><span>:</span></div>
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="00" selected>00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                    </select>
+                                    <label>분</label>
+                                </div>
+                                <p class="color-red">* 지정한 시간 이후로 업로드시 지정한 시간으로 저장됩니다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="small-description color-red">지정된 시간 이외 시간에 업무상 지휘명령을 할 경우 또는 근로한 것으로 승인할 경우에는 초과 근로시간으로 인정됩니다.</div>
+                <div class="btn-box"><a class="waves-effect waves-light btn-small">확인</a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+<!-- header-start -->
+<div class="footer">
+
+
+</div>
+<!-- header-end -->
+<!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../static/js/base.js"></script>
+<script src="../static/js/api/selectorItem.js"></script>
+<script src="../static/js/api/materialize/Select.js"></script>
+<!--JavaScript at end of body for optimized loading-->
+<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+</body>
+</html>
+

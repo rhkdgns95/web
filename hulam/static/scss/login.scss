@@ -1,0 +1,128 @@
+@mixin loginContainer {
+  //display :flex;
+  width: 100%;
+  //height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin loginBox {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+@mixin inputField {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #ffffff;
+  margin-bottom: .3em;
+  input {
+    margin-bottom: 0;
+    border: 0;
+    &::placeholder {
+      padding-left: 3px;
+    }
+    &:focus,
+    &.valid{
+      outline:none;
+      box-shadow: none;
+    }
+  }
+  .prefix {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%  );
+    font-size: 1.5em;
+  }
+}
+
+@mixin autoLoginCell {
+  margin: 5px 0 30px 0;
+  padding-left: 5px;
+}
+
+@mixin buttonBox {
+  a {
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 0px;
+    width: 100%;
+  }
+  margin-bottom: 30px;
+}
+@mixin logoBox {
+  padding-top: 150px;
+  margin-bottom: 50px;
+  //margin-top: -70px;
+  //margin-bottom: 70px;
+  text-align: center;
+  a{
+    display: inline-block;
+    img {
+      margin:0 auto;
+      display: block;
+    }
+  }
+}
+
+@mixin menuCell {
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  a {
+    display: block;
+    box-sizing: border-box;
+    width: 45%;
+  }
+}
+body {
+  height: 100% !important;
+}
+.contents {
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+}
+.login-container {
+  @include loginContainer;
+
+
+  .login-wrapper {
+
+    .logo-box {
+      @include logoBox;
+    }
+    form {
+      max-width: 300px;
+      margin:0 auto;
+
+      &.active {
+        display:none;
+      }
+      .login-box {
+        @include loginBox;
+        .input-field {
+          @include inputField;
+        }
+      }
+      .button-box {
+        @include buttonBox;
+      }
+    }
+    .auto-login-cell {
+      @include autoLoginCell;
+    }
+    .other-menu-box {
+
+
+      .menu-cell {
+        @include menuCell;
+      }
+    }
+  }
+}
+
